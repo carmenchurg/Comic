@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang='es'>
+  <head>
+
+    <!--
+
+     Objetivos de la actividad:
+        -Cambiar la fuente de  las  imágenes
+        -Cambiar el texto
+        -Asignación de clases en los atributos
+        -Copiar nodos html
+    -->
+
+    <!-- 
+    En este proyecto se puede crear tu propia tira cómica utilizando y Fotos cuadradas tiene - entonces ¿por qué no usar las fotos de tu cuenta de Instagram o de Facebook?  Tendrás
+    ser capaz de añadir imágenes, agregar, copiar en leyendas y globos de la historia.  También aprenderemos cómo hacer más escenas mediante la adición de las más viñetas al comic.
+    -->
+
+  <!--
+    Vamos a empezar.
+
+    1) LEER LOS COMENTARIOS. Esto es un comentario. Todo dentro de la etiqueta de comentarios de HTML o  con los signos' /* */' en lenguaje de estilos  CSS, 
+	no se procesa como código, pero aparecen en el  sobre el código. 
+	Para este proyecto, los comentarios los usaremos para  dar instrucciones, consejos y guías para completar el proyecto, 
+	así que debemos leer todos los comentarios que nos encontremos para obtener una comprensión de las tareas que se nos ha pedido  hacer.
+    2) HABITUARNOS Y  ORIENTARNOS DENTRO EL CÓDIGO.
+     HTML se compone de etiquetas que este aspecto<p> </p>.
+	Las etiquetas te dicen algo sobre la información contenida dentro de las mismas. 
+  -->
+
+
+
+    <title>Aranjuez</title>
+	<meta charset='utf-8'"">
+
+  <!-- Este es el estilo para el comic -->
+  <style>
+       /* Esto es un comentario CSS*/
+          /*  CSS sirve para dar estilo */
+               /*  en principio no lo vamos a trabajar aunque podemos echarle un vistazo */
+    body {
+      background-color:#d5f8ff;
+      font-family:"Comic Sans MS", sans-serif;
+      line-height:1.2;
+      text-align: center;
+      padding: 1em 0 0 20px;
+    }
+    h1 {
+      text-transform: uppercase;
+      text-shadow: 4px 4px 0px black;
+      font-size:40px;
+      color:rgb(0, 255, 123);
+    }
+    .comic {
+      max-width:826px;
+      margin:60px auto 0;
+    }
+    .scene {
+      width: 250px;
+      height:250px;
+      border:3px solid black;
+      background: #f6ffd4;
+      margin:8px;
+      display: inline-block;
+      position: relative;
+    }
+    .scene img {
+      width:100%;
+      height:100%;
+      display: block;
+    }
+    .caption {
+      padding:10px;
+      margin:0;
+      position: absolute;
+      left:0;
+      right:0;
+      background:#fdd0fd;
+      text-align:left;
+      top:0;
+    }
+    .caption.bottom {
+      bottom:0;
+      top:auto;
+      border-top:2px solid black;
+    }
+    .caption.top {
+      top:0;
+       border-bottom:2px solid black;
+    }
+    .speech {
+      width:40%;
+      border-radius:50%;
+      border:2px solid black;
+      margin:0;
+      position: absolute;
+      z-index:1;
+      background: Snow ;
+      padding:20px;
+      top:-15px;
+      text-align: center;
+    }
+ 
+    /* CSS avanzado para la orientación de los globos con respecto al personaje*/
+    .speech:after {
+      border-color: snow transparent;
+      border-style: solid;
+      border-width: 13px 13px 0;
+      bottom: -11px;
+      content: "";
+      display: block;
+      left: 50%;
+      margin-left:-14px;
+      position: absolute;
+      width: 0;
+    }
+    .speech:before {
+      border-color: black transparent;
+      border-style: solid;
+      border-width: 16px 16px 0;
+      bottom: -15px;
+      content: "";
+      display: block;
+      left: 50%;
+      margin-left:-17px;
+      position: absolute;
+      width: 0;
+    }
+    .speech.left {
+      left:-15px;
+    }
+    .speech.right {
+      right:-15px;
+    }
+
+    footer {
+      clear:both;
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- 
+    Tarea 1: 
+Primero, ¿por qué no cambiar el encabezado <h1> para dar al cómic un nombre más apropiado.  
+Cualquier texto que va entre las etiquetas <h1> y </h1> se convertirá en el título.</h1>  -->
+  <h1>Un día viviendo en Aranjuez</h1>
+  <h2>Todo es interesante siendo ciudadano de una ciudad tan bonita </h2>
+
+  <p>Nos gusta ser arancetanos </p>
+
+  <!-- 
+  Aquí es donde comienza el cómic. 
+    El <div> con class 'comic'envuelve cada div 'escena  o viñeta ' y contiene a todas las escenas.</div>
+  -->
+  <div class="comic">
+
+      <!--
+        Tarea2
+        El  HTML  del div inferior es una escena de a comic.
+        Empiece por cambiar las imágenes de la escena con una de tus propias fotos.  
+        Como la escena es cuadrada una foto cuadrada funcionará mejor. ¿Por qué no obtener la url de la imagen de una de tus fotos de Instagram?   Cambiar el valor del atributo src de la etiqueta img que va entre las comillas dobles
+      -->
+      <div class="scene">
+        <p class="caption bottom">Una de las zonas más representativas es la plaza de San Antonio.</p>
+        <p class="speech left">¡Mira...! Es la Mariblanca</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Aranjuez._Plaza_de_San_Antonio._01.JPG" alt="" />
+      </div>
+
+       <!-- 
+    ¡ Magnífico! Ahora veamos algunos globos y leyendas incorporados en  otras escenas.
+
+Tarea 3:
+        Ver la primera escena anterior.  Tiene un título y un bocadillo de diálogo.
+        Copiando el párrafo del discurso<p>, adicione una burbuja del discurso de la segunda escena más abajo y luego cambiar su texto.
+      -->
+      <div class="scene">
+        <p class="caption top">Este es el Palacio Real de Aranjuez.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Palacio_Real_de_Aranjuez_%285%29.jpg" alt="" />
+      </div>
+
+      <!-- 
+       Dependiendo de la foto usemos, es posible que desee mover los subtítulos a la 'parte superior' o la 'inferior',
+         o el globo de diálogo "izquierda o derecha".
+
+         Tarea 4:
+         Mira la cuarta escena a continuación. Tiene un bocadillo en el lado izquierdo.
+         Cambie el nombre de la clase "left" a "right" para que el bocadillo se mueva hacia el lado derecho.
+         Si desea que una leyenda esté en la parte superior, nos aseguramos  de que tenga la clase 'top', si lo deseamos en la parte inferior, asegúrese de que tenga la clase 'bottom'. Podemos hacer este cambio en la escena o viñetas
+      -->
+      <div class="scene">
+        <p class="speech left">¡Y que bonitos los Jardines!</p>
+        <img src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2023/01/01/16725667470477.jpg" alt="" />
+      </div>
+
+      <div class="scene">
+        <p class="speech right">Me encanta dar de comer a los patos en el río</p>
+        <img src="https://www.patrimonionacional.es/sites/default/files/styles/full/public/images/Aranjuez_Exteriores_Jard%C3%ADn%20de%20la%20Isla_foto%20%282%29.jpg?itok=b739mPsJ" alt="" />
+      </div>
+      
+      <div class="scene">
+        <p class="speech right"> Si no te mareas puedes dar un paseo en barco</p>
+        <img src="https://www.elcuriosity.com/wp-content/uploads/2015/09/zona-monumental.jpg" alt="" />
+      </div>
+
+      <div class="scene">
+        <p class="caption bottom">También lo puedes ver desde arriba montando en globo.</p>
+        <img src="https://www.audioguias-bluehertz.es/assets/images/01audiogia-aranjuez-toma-aerea-700x525.jpg" alt="" />
+      </div>
+
+       <!-- 
+        ¿ Este es el final del cómic :( ?
+        ¿Queremos crear a un cómic más grande?
+
+        Tarea 5:
+        Copiar el código HTML de tres 'escena' y pegar por debajo de este comentario... ahora tenemos 3 escenas más en nuestro comic ;)
+      -->
+      <div class="scene">
+        <p class="caption bottom">Los paisajes son geniales para hacer fotos.</p>
+        <img src="https://media-cdn.tripadvisor.com/media/photo-s/01/7f/59/94/aranjuez-madrid-province.jpg" alt="" />
+      </div>
+      
+      <div class="scene">
+        <p class="speech right">¡Que foto más original!</p>
+        <img src="https://ilutravel.com/wp-content/uploads/Aranjuez-superior.jpg" alt="" />
+      </div>
+
+      <div class="scene">
+        <p class="caption bottom">Y por último, si te gusta comer como a mi amiga Andra te recomiendo el bufet libre de sushi.</p>
+        <img src="https://media-cdn.tripadvisor.com/media/photo-s/1b/08/ab/83/on-sushi-aranjuez.jpg" alt="" />
+      </div>
+  </div>
+
+  
+  
+
+
+
+  <footer>
+    <p> Docente: José Antonio Cano de la Cuadra</p>
+      <!-- Créditos  para imágenes -->
+   <p> Todas las imágenes tomadas de <a href="http://flickr.com">flickr.com</a></p>
+  </footer>
+
+</body>
+</html>
